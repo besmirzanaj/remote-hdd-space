@@ -40,7 +40,7 @@ foreach ($computer in $computerlist)
         }
         else 
         {
-        # Padd data for offline Computers
+        # Pad data for offline Computers
         Add-Content -Path $reportfile `
         -Value "`"$computer`",`"Offline`",`"Offline`",`"Offline`",`"Offline`",`"Offline`",`"Offline`""
         }  
