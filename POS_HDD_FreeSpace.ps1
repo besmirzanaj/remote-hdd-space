@@ -21,9 +21,7 @@ $WantFile = "\c$\Windows\explorer.exe"
 ## Create report
 ## Push info where possible and "Offline" Value when Store is offline
 foreach ($computer in $computerlist)
-    {$POSonline = Test-Path "\\$computer$WantFile"
-     trap { continue; }
-        if ($POSonline -eq $true) 
+{if (Test-Connection -ComputerName $computer -Quiet)
         { 
             Get-WMIObject -ComputerName $computer Win32_LogicalDisk `
             | select `
@@ -33,10 +31,9 @@ foreach ($computer in $computerlist)
                 Name, `
                 @{n='Size (Gb)' ;e={"{0:n2}" -f ($_.size/1gb)}}, `
                 @{n='FreeSpace (Gb)';e={"{0:n2}" -f ($_.freespace/1gb)}}, `
-                @{n='PercentFree';e={"{0:n2}" -f ($_.freespace/$_.size*100)}} `
+                @{n='PercentFree';e={"{0:n0}" -f ($_.freespace/$_.size*100)}} `
             | Where-Object {$_.DriveType -eq 3} `
-            | Export-CSV -Append $reportfile -NoTypeInformation `
-            | Sort-Object -Property freespace
+            | Export-CSV -Append $reportfile -NoTypeInformation
         }
         else 
         {
