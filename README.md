@@ -1,7 +1,8 @@
-# remote-hdd-space
-Powershell Scripts to check into remote hosts and prepare a list for freeHDD space.
+# Remote HDD Space
 
-export the resulsts in a CSV file
+This is a Powershell script to check into remote hosts and prepare a list for freeHDD space.
+Then the script exports the resulsts in a CSV file.
+And finally send the results in CSV in an email attachment (optional)
 
-Send the results in CSV in an email attachment
+Next features will include parameters and maybe Out-GridView.
 
