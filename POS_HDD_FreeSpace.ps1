@@ -3,7 +3,7 @@
 ## if yes then get HDD space and free space and put it in a list
 ## export this list in an CSV file
 #
-#clear the screen
+#clear the screen (This is optional)
 clear
 
 #Declare the files we will be using
@@ -14,6 +14,7 @@ $reportfile = "C:\hdd_report\HDD_Report_$((Get-Date).ToString('yyyy-MM-dd')).csv
 ##Import Store list to be queried
 $computerlist = get-Content $computers  # Replace it with your TXT file which contain Name of Computers 
 
+#Please add a better scneario regarding this part
 ## Define the local file to be checked if store is online
 ## explorer.exe seems a good example
 $WantFile = "\c$\Windows\explorer.exe" 
