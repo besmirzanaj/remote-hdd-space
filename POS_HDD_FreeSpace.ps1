@@ -1,7 +1,7 @@
-﻿## Script to get and create a CSV report of all HDDs in a list
-## Check if store is online
+﻿## Script to get and create a CSV report of all HDDs of remote PCs in a list
+## Check if PC is online
 ## if yes then get HDD space and free space and put it in a list
-## export this list in an CSV file
+## export this list in an CSV file, Pad with "Offline" is PC is offline
 #
 #clear the screen (This is optional)
 clear
@@ -11,13 +11,8 @@ $computers = "C:\hdd_report\list_of_pc_to_be_queried.csv"
 $reportfile = "C:\hdd_report\HDD_Report_$((Get-Date).ToString('yyyy-MM-dd')).csv"
           
 
-##Import Store list to be queried
+##Import PC list to be queried
 $computerlist = get-Content $computers  # Replace it with your TXT file which contain Name of Computers 
-
-#Please add a better scneario regarding this part
-## Define the local file to be checked if store is online
-## explorer.exe seems a good example
-$WantFile = "\c$\Windows\explorer.exe" 
 
 ## Create report
 ## Push info where possible and "Offline" Value when Store is offline
