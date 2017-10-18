@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/besmirzanaj/remote-hdd-space.svg?branch=master)](https://travis-ci.org/besmirzanaj/remote-hdd-space)
+[![Build Status](https://travis-ci.org/besmirzanaj/remote-hdd-space.svg?branch=master)](https://travis-ci.org/besmirzanaj/remote-hdd-space) [![Build status](https://ci.appveyor.com/api/projects/status/dqfulhyokn4iwwno?svg=true)](https://ci.appveyor.com/project/besmirzanaj/remote-hdd-space)
+
 
 # Remote HDD Space
 
