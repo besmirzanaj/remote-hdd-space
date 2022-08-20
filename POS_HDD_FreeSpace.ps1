@@ -1,4 +1,4 @@
-﻿## Script to get and create a CSV report of all HDDs of remote PCs in a list
+## Script to get and create a CSV report of all HDDs of remote PCs in a list
 ## Check if PC is online
 ## if yes then get HDD space and free space and put it in a list
 ## export this list in an CSV file, Pad with "Offline" is PC is offline
